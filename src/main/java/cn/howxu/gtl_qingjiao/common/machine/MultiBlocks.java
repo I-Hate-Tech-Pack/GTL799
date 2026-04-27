@@ -11,6 +11,8 @@ import com.gregtechceu.gtceu.api.data.RotationState;
 import com.gregtechceu.gtceu.api.machine.MultiblockMachineDefinition;
 import com.gregtechceu.gtceu.api.machine.multiblock.WorkableElectricMultiblockMachine;
 import com.gregtechceu.gtceu.common.data.GTBlocks;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 
 /**
  * @description: TODO
@@ -30,6 +32,7 @@ public class MultiBlocks {
                 .workableCasingRenderer(GTCEu.id("block/casings/hpca/high_power_casing"), GTCEu.id(("block/multiblock/fusion_reactor")))
                 .pattern(QingJiaoGeneratorDefination.getPattern())
                 .hasTESR(true)
+                .tooltips(Component.translatable("gtl_qingjiao.tip.aq").withStyle(ChatFormatting.RED))
                 .register();
     }
 

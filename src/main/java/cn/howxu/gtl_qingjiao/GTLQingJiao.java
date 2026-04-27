@@ -4,6 +4,7 @@ import cn.howxu.gtl_qingjiao.common.machine.MultiBlocks;
 import cn.howxu.gtl_qingjiao.common.recipe.RecipeTypes;
 import cn.howxu.gtl_qingjiao.data.ModBlocks;
 import cn.howxu.gtl_qingjiao.data.ModItems;
+import cn.howxu.gtl_qingjiao.event.CreativeTabEvent;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.cover.CoverDefinition;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
@@ -32,6 +33,9 @@ public class GTLQingJiao {
         IEventBus modbus = context.getModEventBus();
         // ModItems.REGISTER.register(modbus);
         REGISTRATE.registerEventListeners(modbus);
+        ModBlocks.REGISTER.register(modbus);
+        ModItems.REGISTER.register(modbus);
+        modbus.addListener(CreativeTabEvent::addToCreativeTab);
         modbus.addGenericListener(MachineDefinition.class, (GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event)-> {
             MultiBlocks.init();
         });
@@ -40,7 +44,6 @@ public class GTLQingJiao {
         });
         modbus.addGenericListener(CoverDefinition.class, (GTCEuAPI.RegisterEvent<ResourceLocation, CoverDefinition> event) -> {
             ModItems.init();
-            ModBlocks.init();
         });
     }
 }

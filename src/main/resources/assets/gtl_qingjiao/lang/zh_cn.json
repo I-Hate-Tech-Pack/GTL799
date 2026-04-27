@@ -1,5 +1,9 @@
 {
   "block.gtl_qingjiao.qingjiao_generator": "人造青椒酱",
   "gtceu.qingjiao_generator": "光合作用",
-  "item.gtl_qingjiao.wrench": "扳手"
+  "item.gtl_qingjiao.wrench": "扳手",
+  "block.gtl_qingjiao.qingjiao": "青椒酱",
+  "gtl_qingjiao.tip.1": "大狗大狗椒椒椒",
+  "gtl_qingjiao.tip.2": "GTL就是有点孤独 靠近青椒会好一些",
+  "gtl_qingjiao.tip.aq": "人造恒星是什么路边?"
 }

@@ -22,7 +22,7 @@ public class RecipeTypes {
         QINGJIAO_GENERATOR_RECIPES = GTRecipeTypes
                 .register("qingjiao_generator", GTRecipeTypes.MULTIBLOCK)
                 .setEUIO(IO.OUT)
-                .setMaxIOSize(1, 0, 2, 0)
+                .setMaxIOSize(1, 0, 2, 1)
                 .setSound(GTSoundEntries.FURNACE)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_FUSION, ProgressTexture.FillDirection.RIGHT_TO_LEFT);
     }
