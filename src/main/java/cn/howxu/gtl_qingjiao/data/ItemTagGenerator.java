@@ -27,7 +27,6 @@ public class ItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
-        tag(ModItemTag.WRENCH_TAG_1).add(ModItems.WRENCH_ITEM.get());
-        tag(ModItemTag.WRENCH_TAG_2).add(ModItems.WRENCH_ITEM.get());
+
     }
 }

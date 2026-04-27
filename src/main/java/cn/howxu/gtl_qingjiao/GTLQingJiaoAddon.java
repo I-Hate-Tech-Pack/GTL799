@@ -1,5 +1,6 @@
 package cn.howxu.gtl_qingjiao;
 
+import cn.howxu.gtl_qingjiao.common.GTLQingJiaoRegistry;
 import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
@@ -14,7 +15,7 @@ public class GTLQingJiaoAddon implements IGTAddon {
 
     @Override
     public GTRegistrate getRegistrate() {
-        return GTLQingJiao.REGISTRATE;
+        return GTLQingJiaoRegistry.REGISTRATE;
     }
 
     @Override
