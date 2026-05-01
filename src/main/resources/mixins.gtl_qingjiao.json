@@ -4,8 +4,11 @@
   "package": "cn.howxu.gtl_qingjiao.mixin",
   "refmap": "mixins.gtl_qingjiao.refmap.json",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [],
+  "mixins": [
+    "server.TeamUtilMixin"
+  ],
   "client": [
+    "client.ToolItemRenderMixin",
     "client.BrandMixin",
     "client.GameTitleMixin"
   ],

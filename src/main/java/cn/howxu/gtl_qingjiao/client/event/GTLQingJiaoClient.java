@@ -20,11 +20,12 @@ public class GTLQingJiaoClient {
     // On game start
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
-    public static void onClientSetup(FMLClientSetupEvent event){
-        event.enqueueWork(()->{
+    public static void onClientSetup(FMLClientSetupEvent event) {
+        event.enqueueWork(() -> {
             Minecraft.getInstance().getWindow().setTitle("GregTech Leisure | 799BEST");
         });
     }
+
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void addEntityLayers(EntityRenderersEvent.AddLayers event) {

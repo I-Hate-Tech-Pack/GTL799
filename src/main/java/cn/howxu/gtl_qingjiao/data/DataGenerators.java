@@ -1,6 +1,7 @@
 package cn.howxu.gtl_qingjiao.data;
 
 import cn.howxu.gtl_qingjiao.GTLQingJiao;
+import cn.howxu.gtl_qingjiao.data.recipe.RecipeGenerator;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;

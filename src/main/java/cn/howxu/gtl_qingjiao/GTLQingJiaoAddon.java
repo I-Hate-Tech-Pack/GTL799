@@ -1,9 +1,13 @@
 package cn.howxu.gtl_qingjiao;
 
 import cn.howxu.gtl_qingjiao.common.GTLQingJiaoRegistry;
+import cn.howxu.gtl_qingjiao.data.recipe.MultiBlockRecipes;
 import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
+import net.minecraft.data.recipes.FinishedRecipe;
+
+import java.util.function.Consumer;
 
 /**
  * @description: TODO
@@ -26,5 +30,11 @@ public class GTLQingJiaoAddon implements IGTAddon {
     @Override
     public String addonModId() {
         return GTLQingJiao.MODID;
+    }
+
+    @Override
+    public void addRecipes(Consumer<FinishedRecipe> provider) {
+        IGTAddon.super.addRecipes(provider);
+        MultiBlockRecipes.init(provider);
     }
 }

@@ -1,6 +1,6 @@
 package cn.howxu.gtl_qingjiao.event;
 
-import cn.howxu.gtl_qingjiao.data.ModItems;
+import cn.howxu.gtl_qingjiao.data.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 
