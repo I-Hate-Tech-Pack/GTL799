@@ -26,6 +26,9 @@ jobs:
       - name: Generate Data
         run: ./gradlew runData
 
+      - name: Clean generated resources
+        run: rm -rf src/generated/resources
+
       - name: Publish
         run: ./gradlew publish
         env:
