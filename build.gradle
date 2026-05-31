@@ -233,21 +233,37 @@ tasks.named('jar', Jar).configure {
     finalizedBy 'reobfJar'
 }
 
-// However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing:
-// tasks.named('publish').configure {
-//     dependsOn 'reobfJar'
-// }
+tasks.register('sourcesJar', Jar) {
+    archiveClassifier = 'sources'
+    manifest {
+        attributes([
+                "Specification-Title"       : mod_id,
+                "Specification-Vendor"      : mod_authors,
+                "Specification-Version"     : "1",
+                "Implementation-Title"      : project.name,
+                "Implementation-Version"    : "${version}",
+                "Implementation-Vendor"     : mod_authors,
+                "Implementation-Timestamp"  : new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+    from sourceSets.main.allJava
+}
 
-// Example configuration to allow publishing using the maven-publish plugin
 publishing {
     publications {
-        register('mavenJava', MavenPublication) {
+        mavenJava(MavenPublication) {
             artifact jar
+            artifact sourcesJar
         }
     }
     repositories {
         maven {
-            url "file://${project.projectDir}/mcmodsrepo"
+            name = "HowXu"
+            url = uri("https://maven.howxu.cn/")
+            credentials {
+                username = System.getenv("MAVEN_USERNAME")
+                password = System.getenv("MAVEN_PASSWORD")
+            }
         }
     }
 }
