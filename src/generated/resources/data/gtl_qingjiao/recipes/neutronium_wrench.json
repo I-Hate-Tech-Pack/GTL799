@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "gtl_qingjiao",
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "tag": "minecraft:planks"
+    },
+    "C": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "BC ",
+    "CB ",
+    " A "
+  ],
+  "result": {
+    "item": "gtl_qingjiao:neutronium_wrench"
+  },
+  "show_notification": true
+}

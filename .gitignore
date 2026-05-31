@@ -20,7 +20,8 @@ build
 # other
 eclipse
 run
-src/generated
+src/generated/.cache/
+src/generated/assets/
 run-data
 
 # Files from Forge MDK

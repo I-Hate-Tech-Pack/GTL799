@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "gtl_qingjiao",
+  "key": {
+    "A": {
+      "item": "minecraft:iron_trapdoor"
+    },
+    "B": {
+      "item": "gtl_qingjiao:qingjiao"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "result": {
+    "item": "gtl_qingjiao:qingjiao_generator"
+  },
+  "show_notification": true
+}

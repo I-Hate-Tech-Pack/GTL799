@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "gtl_qingjiao",
+  "key": {
+    "A": {
+      "tag": "minecraft:wool"
+    },
+    "B": {
+      "tag": "minecraft:planks"
+    },
+    "C": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "tag": "minecraft:fox_food"
+    }
+  },
+  "pattern": [
+    "EAE",
+    "ABA",
+    "CAC"
+  ],
+  "result": {
+    "item": "gtl_qingjiao:qingjiao"
+  },
+  "show_notification": true
+}

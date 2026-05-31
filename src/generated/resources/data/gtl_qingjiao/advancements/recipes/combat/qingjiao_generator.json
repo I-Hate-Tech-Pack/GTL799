@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_799": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gtl_qingjiao:qingjiao"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "gtl_qingjiao:qingjiao_generator"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_799",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "gtl_qingjiao:qingjiao_generator"
+    ]
+  },
+  "sends_telemetry_event": false
+}
